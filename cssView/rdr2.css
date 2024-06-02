@@ -1,0 +1,61 @@
+/* Importando a fonte personalizada do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f0f5;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    background-color: #4CAF50;
+    padding: 20px 0;
+    text-align: center;
+    color: white;
+}
+
+header p {
+    font-size: 24px;
+    margin: 0;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    max-width: 1000px;
+    width: 100%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.game-image img {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.game-details {
+    max-width: 600px;
+}
+
+.game-details h2 {
+    margin-top: 0;
+}
+
+.game-details p {
+    font-size: 16px;
+    margin: 10px 0;
+}
