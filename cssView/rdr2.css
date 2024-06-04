@@ -10,8 +10,8 @@ body {
 }
 
 header {
-    background-color: #4CAF50;
-    padding: 20px 0;
+    background-color: #333;
+    padding: 10px 0;
     text-align: center;
     color: white;
 }
@@ -23,8 +23,9 @@ header p {
 
 main {
     display: flex;
-    justify-content: center;
-    padding: 40px 20px;
+    flex-direction: column; /* Alinha os elementos verticalmente */
+    align-items: center;
+    padding: 25px 20px;
 }
 
 .content {
@@ -58,4 +59,53 @@ main {
 .game-details p {
     font-size: 16px;
     margin: 10px 0;
+}
+
+/* Estilos para o menu responsivo */
+.menu {
+    background-color: #343a40;
+    width: 25%;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.menu ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    margin: 0 10px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.menu a:hover {
+    background-color: #495057;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .menu ul {
+        flex-direction: column; /* Faz os itens ficarem em coluna em telas menores */
+    }
+
+    .menu li {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .content {
+        flex-direction: column; /* Ajusta o conteúdo para coluna em telas menores */
+        align-items: center;
+    }
 }
