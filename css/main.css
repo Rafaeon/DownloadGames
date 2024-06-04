@@ -100,7 +100,7 @@ button:hover {
 
 /* Estilos para o menu responsivo */
 .menu {
-    background-color: #343a40;
+    background-color: #333;
     width: 25%;
     border-radius: 15px;
     margin-bottom: 15px;
@@ -127,7 +127,7 @@ button:hover {
 }
 
 .menu a:hover {
-    background-color: #495057;
+    background-color: #333;
 }
 
 /* Estilos responsivos */
