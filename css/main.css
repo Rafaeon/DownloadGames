@@ -141,7 +141,7 @@ button:hover {
 }
 
 /* Estilos responsivos */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .menu ul {
         flex-direction: unset; /* Faz os itens ficarem em coluna em telas menores */
     }
@@ -152,8 +152,8 @@ button:hover {
     }
     .menu {
         background-color: #333;
-        width: 70%;
-        border-radius: 15px;
-        margin-bottom: 15px;
+        width: 90%;
+        border-radius: 10px;
+        margin-bottom: 10px;
     }
 }
