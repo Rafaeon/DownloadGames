@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./cssCategorias/cssCategoria.css">
+    <title>Jogos educativos</title>
+    <link rel="icon" href="img/video-game-vector-icon.jpg" type="image/x-icon">
+</head>
+<header>
+    <p><b>Jogos educativos ponto com</b></p>
+</header>
+
+<body>
+    <main>
+        <div class="menu">
+            <ul>
+                <li><strong><a href="../index.html">Home</a></strong></li>
+                <li><strong><a href="#">Page</a></strong></li>
+                <li><strong><a href="#">Categorias</a></strong></li>
+            </ul>
+        </div>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Pesquisar Jogos...">
+            <button onclick="searchGames()">Buscar</button>
+        </div>
+        <div class="button-list">
+            <a href="https://example.com/page1" class="button">Página 1</a>
+            <a href="https://example.com/page2" class="button">Página 2</a>
+            <a href="https://example.com/page3" class="button">Página 3</a>
+            <a href="https://example.com/page4" class="button">Página 4</a>
+        </div>
+    </main>
+
+    <script>
+        function searchGames() {
+            var input = document.getElementById('searchInput').value.toLowerCase();
+            var gameItems = document.getElementsByClassName('game-item');
+
+            for (var i = 0; gameItems.length; i++) {
+                var gameTitle = gameItems[i].getElementsByTagName('p')[0].innerText.toLowerCase();
+                if (gameTitle.includes(input)) {
+                    gameItems[i].style.display = "";
+                } else {
+                    gameItems[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+    
+</body>
+<footer>
+    <p><strong>© Gotico_suaveiro</strong></p>
+</footer>
+
+</html>
