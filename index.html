@@ -1,149 +1,156 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./css/main.css">
-    <title>Jogos educativos</title>
+    <title>Jogos Educativos</title>
     <link rel="icon" href="img/video-game-vector-icon.jpg" type="image/x-icon">
 </head>
-<header>
-    <p><b>Jogos educativos ponto com</b></p>
-</header>
 
 <body>      
+    <header>
+        <p>Jogos Educativos .com</p>
+    </header>
+
     <main>
         <div class="menu">
             <ul>
-                <li><strong><a href="index.html">Home</a></strong></li>
-                <li><strong><a href="#">Page</a></strong></li>
-                <li><strong><a href="./Categorias/categoriaIndex.html">Categorias</a></strong></li>
+                <li><a href="index.html">🏠 Home</a></li>
+                <li><a href="#">📄 Page</a></li>
+                <li><a href="./Categorias/categoriaIndex.html">🎮 Categorias</a></li>
             </ul>
-        </div>  
+        </div>
+        
         <div class="search-container">
-            <input type="text" id="searchInput" placeholder="Pesquisar Jogos...">
+            <input type="text" id="searchInput" placeholder="🔍 Pesquisar jogos...">
             <button onclick="searchGames()">Buscar</button>
         </div>
 
         <div class="image-grid" id="gameGrid">
-            <h3 class="game-item">
-                <a href="/seedGame/spiderhomem2 v1.4.5.torrent">
-                    <img src="img/SpiderMan2PC2.jpeg" height="100px" width="100px">
-                    <p>Spider-Man 2 (nao funciona.... ainda)</p>
+            <!-- Categoria 1: Ação -->
+            <h3 class="game-item" data-category="1">
+                <a href="./seedGame/spiderhomem2 v1.4.5.torrent">
+                    <img src="img/SpiderMan2PC2.jpeg" alt="Spider-Man 2">
+                    <p>Spider-Man 2<br><small style="opacity: 0.6;">(em desenvolvimento)</small></p>
                 </a>
             </h3>
-            <h3 class="game-item">
-                <a href="/seedGame/gggooooffw.torrent">
-                    <img src="img/godofwar2.jpg" height="100px" width="100px">
+            <h3 class="game-item" data-category="1">
+                <a href="./seedGame/gggooooffw.torrent">
+                    <img src="img/godofwar2.jpg" alt="God of War Ragnarök">
                     <p>God of War Ragnarök</p>
                 </a>
             </h3>
-            <h3 class="game-item">
-                <a href="/seedGame/rua lutador V.torrent">
-                    <img src="img/brigaderuaV.jpg" height="100px" width="100px">
+            <h3 class="game-item" data-category="3">
+                <a href="./seedGame/rua lutador V.torrent">
+                    <img src="img/brigaderuaV.jpg" alt="Street Fighter V">
                     <p>Street Fighter V</p>
                 </a>
             </h3>
-            <h3 class="game-item">
-                <a href="/seedGame/rdrrrr1.torrent">
-                    <img src="img/rdr1.jpg" height="100px" width="100px">
+            <h3 class="game-item" data-category="1">
+                <a href="./seedGame/rdrrrr1.torrent">
+                    <img src="img/rdr1.jpg" alt="Red Dead Redemption">
                     <p>Red Dead Redemption</p>
                 </a>
             </h3>
-            <h3 class="game-item">
+            <h3 class="game-item" data-category="1">
                 <a href="views/rdr2.html">
-                    <img src="img/Hpl5MtwQgOVF9vJqlfui6SDB5Jl4oBSq.jpeg" height="100px" width="100px">
+                    <img src="img/Hpl5MtwQgOVF9vJqlfui6SDB5Jl4oBSq.jpeg" alt="Red Dead Redemption 2">
                     <p>Red Dead Redemption 2</p>
                 </a>
             </h3>
-            <h3 class="game-item">
-                <a href="/seedGame/indiaaanaaa jonesss.torrent">
-                    <img src="img/indianajones.jpg" height="100px" width="100px">
-                    <p>Indiana Jones - Grande Círculo</p>
+            <h3 class="game-item" data-category="1">
+                <a href="./seedGame/indiaaanaaa jonesss.torrent">
+                    <img src="img/indianajones.jpg" alt="Indiana Jones">
+                    <p>Indiana Jones<br>Grande Círculo</p>
                 </a>
             </h3>
-            <h3 class="game-item">
-                <a href="/seedGame/WatchDogs3.torrent">
-                    <img src="img/legion.jpeg" height="100px" width="100px">
+            <h3 class="game-item" data-category="1">
+                <a href="./seedGame/WatchDogs3.torrent">
+                    <img src="img/legion.jpeg" alt="Watch Dogs Legion">
                     <p>Watch Dogs Legion</p>
                 </a>
             </h3>
-            <h3 class="game-item">
-                <a href="/seedGame/GhostOfTsushima.torrent">
-                    <img src="img/GhistOFts.jpg" height="100px" width="100px">
+            <h3 class="game-item" data-category="1">
+                <a href="./seedGame/GhostOfTsushima.torrent">
+                    <img src="img/GhistOFts.jpg" alt="Ghost Of Tsushima">
                     <p>Ghost Of Tsushima</p>
                 </a>
             </h3>
-            <h3 class="game-item">
-            <a href="/seedGame/dragon bolas sparkando zero (gamebounty) (1).torrent">
-                <img src="img/dbzZero.jpeg" height="100px" width="100px">
-                <p>Dragon Ball Sparking ZERO</p></a>
+            <h3 class="game-item" data-category="3">
+                <a href="./seedGame/dragon bolas sparkando zero (gamebounty) (1).torrent">
+                    <img src="img/dbzZero.jpeg" alt="Dragon Ball Sparking ZERO">
+                    <p>Dragon Ball<br>Sparking ZERO</p>
+                </a>
             </h3>
-            <h3 class="game-item">
-                <a href="/seedGame/Tekken 8.torrent">
-                    <img src="img/tk8.jpg" height="100px" width="100px">
+            <h3 class="game-item" data-category="3">
+                <a href="./seedGame/Tekken 8.torrent">
+                    <img src="img/tk8.jpg" alt="Tekken 8">
                     <p>Tekken 8</p>
                 </a>
             </h3>
-            <h3 class="game-item">
-                <a href="/seedGame/Sleeping dogs.torrent">
-                    <img src="img/dormindocomcachorros.jpg" height="100px" width="100px">
+            <h3 class="game-item" data-category="1">
+                <a href="./seedGame/Sleeping dogs.torrent">
+                    <img src="img/dormindocomcachorros.jpg" alt="Sleeping Dogs">
                     <p>Sleeping Dogs</p>
                 </a>
             </h3>
-            <h3 class="game-item">
-                <a href="/seedGame/Forza Horizon 4 [Ecológica Verde].torrent">
-                    <img src="img/forza4.jpg" height="100px" width="100px">
+            <h3 class="game-item" data-category="2">
+                <a href="./seedGame/Forza Horizon 4 [Ecológica Verde].torrent">
+                    <img src="img/forza4.jpg" alt="Forza Horizon 4">
                     <p>Forza Horizon 4</p>
                 </a>
             </h3>
-            <h3 class="game-item">
-                <a href="/seedGame/fh5 fitgarota.torrent">
-                    <img src="img/forza5.jpg" height="100px" width="100px">
+            <h3 class="game-item" data-category="2">
+                <a href="./seedGame/fh5 fitgarota.torrent">
+                    <img src="img/forza5.jpg" alt="Forza Horizon 5">
                     <p>Forza Horizon 5</p>
                 </a>
             </h3>
-            <h3 class="game-item">
+            <h3 class="game-item" data-category="1">
                 <a href="">
-                    <img src="img/acShadows.jpeg" height="100px" width="100px">
-                    <p>Assassins Creed Shadows</p>
+                    <img src="img/acShadows.jpeg" alt="Assassins Creed Shadows">
+                    <p>Assassins Creed<br>Shadows</p>
                 </a>
             </h3>
-            <h3 class="game-item">
-                <a href="/seedGame/grand.theft.auto.v (Portable).torrent">
-                    <img src="img/download.jpeg" height="100px" width="100px">
+            <h3 class="game-item" data-category="1">
+                <a href="./seedGame/grand.theft.auto.v (Portable).torrent">
+                    <img src="img/download.jpeg" alt="GTA V">
                     <p>Grand Theft Auto V</p>
                 </a>
             </h3>
-            <h3 class="game-item">
-                <a href="/seedGame/AssassinsCreedValhalla.torrent">
-                    <img src="img/valhalla.png" height="100px" width="100px">
-                    <p>Assassins Creed Valhalla</p>
+            <h3 class="game-item" data-category="1">
+                <a href="./seedGame/AssassinsCreedValhalla.torrent">
+                    <img src="img/valhalla.png" alt="Assassins Creed Valhalla">
+                    <p>Assassins Creed<br>Valhalla</p>
                 </a>
             </h3>
-            <h3 class="game-item">
-                <a href="/seedGame/Rooftops.and.Alleys.The.Parkour.Game.v1.0.1.7.zip.torrent">
-                    <img src="img/Rooftops&Alleys.jpg" height="100px" width="100px">
+            <h3 class="game-item" data-category="4">
+                <a href="./seedGame/Rooftops.and.Alleys.The.Parkour.Game.v1.0.1.7.zip.torrent">
+                    <img src="img/Rooftops&Alleys.jpg" alt="Rooftops & Alleys">
                     <p>Rooftops & Alleys</p>
                 </a>
             </h3>
-            <h3 class="game-item">
-                <a href="/seedGame/BMX.Streets-TENOKE.torrent">
-                    <img src="img/bmxstreets.jpeg" height="100px" width="100px">
-                    <p>Bmx Streets</p>
+            <h3 class="game-item" data-category="4">
+                <a href="./seedGame/BMX.Streets-TENOKE.torrent">
+                    <img src="img/bmxstreets.jpeg" alt="BMX Streets">
+                    <p>BMX Streets</p>
                 </a>
             </h3>
         </div>
     </main>
 
+    <footer>
+        <p>© Gotico_suaveiro • 2024</p>
+    </footer>
+
     <script>
         function searchGames() {
-            var input = document.getElementById('searchInput').value.toLowerCase();
-            var gameItems = document.getElementsByClassName('game-item');
+            const input = document.getElementById('searchInput').value.toLowerCase();
+            const gameItems = document.getElementsByClassName('game-item');
 
-            for (var i = 0; gameItems.length; i++) {
-                var gameTitle = gameItems[i].getElementsByTagName('p')[0].innerText.toLowerCase();
+            for (let i = 0; i < gameItems.length; i++) {
+                const gameTitle = gameItems[i].getElementsByTagName('p')[0].innerText.toLowerCase();
                 if (gameTitle.includes(input)) {
                     gameItems[i].style.display = "";
                 } else {
@@ -151,11 +158,34 @@
                 }
             }
         }
-    </script>
-    
-</body>
-<footer>
-    <p><strong>© Gotico_suaveiro</strong></p>
-</footer> 
 
+        // Filtrar por categoria quando vier da URL
+        function filterByCategory() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const category = urlParams.get('category');
+            
+            if (category) {
+                const gameItems = document.getElementsByClassName('game-item');
+                for (let i = 0; i < gameItems.length; i++) {
+                    const itemCategory = gameItems[i].getAttribute('data-category');
+                    if (itemCategory === category) {
+                        gameItems[i].style.display = "";
+                    } else {
+                        gameItems[i].style.display = "none";
+                    }
+                }
+            }
+        }
+
+        // Buscar ao pressionar Enter
+        document.getElementById('searchInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                searchGames();
+            }
+        });
+
+        // Executar filtro ao carregar a página
+        window.addEventListener('load', filterByCategory);
+    </script>
+</body>
 </html>

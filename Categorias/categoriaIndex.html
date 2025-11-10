@@ -1,57 +1,101 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./cssCategorias/cssCategoria.css">
-    <title>Jogos educativos</title>
-    <link rel="icon" href="img/video-game-vector-icon.jpg" type="image/x-icon">
+    <title>Categorias - Jogos Educativos</title>
+    <link rel="icon" href="../img/video-game-vector-icon.jpg" type="image/x-icon">
 </head>
-<header>
-    <p><b>Jogos educativos ponto com</b></p>
-</header>
 
 <body>
+    <header>
+        <p>Jogos Educativos .com</p>
+    </header>
+
     <main>
         <div class="menu">
             <ul>
-                <li><strong><a href="../index.html">Home</a></strong></li>
-                <li><strong><a href="#">Page</a></strong></li>
-                <li><strong><a href="#">Categorias</a></strong></li>
+                <li><a href="../index.html">🏠 Home</a></li>
+                <li><a href="#">📄 Page</a></li>
+                <li><a href="categoriaIndex.html">🎮 Categorias</a></li>
             </ul>
         </div>
-        <div class="search-container">
-            <input type="text" id="searchInput" placeholder="Pesquisar Jogos...">
-            <button onclick="searchGames()">Buscar</button>
+
+        <div class="page-title">
+            <h1>🎯 Escolha sua Categoria</h1>
+            <p>Explore nossos jogos por gênero</p>
         </div>
-        <div class="button-list">
-            <a href="https://example.com/page1" class="button">Página 1</a>
-            <a href="https://example.com/page2" class="button">Página 2</a>
-            <a href="https://example.com/page3" class="button">Página 3</a>
-            <a href="https://example.com/page4" class="button">Página 4</a>
+
+        <div class="category-grid">
+            <a href="../index.html?category=1" class="category-card" data-category="1">
+                <div class="category-icon">⚔️</div>
+                <h2>Ação</h2>
+                <p>Aventura, combate e adrenalina</p>
+                <span class="game-count" id="count-1">0 jogos</span>
+            </a>
+
+            <a href="../index.html?category=2" class="category-card" data-category="2">
+                <div class="category-icon">🏎️</div>
+                <h2>Corrida</h2>
+                <p>Velocidade e competição</p>
+                <span class="game-count" id="count-2">0 jogos</span>
+            </a>
+
+            <a href="../index.html?category=3" class="category-card" data-category="3">
+                <div class="category-icon">🥊</div>
+                <h2>Luta</h2>
+                <p>Combates épicos e torneios</p>
+                <span class="game-count" id="count-3">0 jogos</span>
+            </a>
+
+            <a href="../index.html?category=4" class="category-card" data-category="4">
+                <div class="category-icon">🏃</div>
+                <h2>Esportes</h2>
+                <p>Esportes radicais e simulações</p>
+                <span class="game-count" id="count-4">0 jogos</span>
+            </a>
+        </div>
+
+        <div class="all-games-section">
+            <a href="../index.html" class="all-games-button">
+                <span>📚 Ver Todos os Jogos</span>
+            </a>
         </div>
     </main>
 
+    <footer>
+        <p>© Gotico_suaveiro • 2024</p>
+    </footer>
+
     <script>
-        function searchGames() {
-            var input = document.getElementById('searchInput').value.toLowerCase();
-            var gameItems = document.getElementsByClassName('game-item');
+        // Simulação de contagem de jogos por categoria
+        // Em produção, isso viria do backend ou seria calculado dinamicamente
+        const gameCounts = {
+            '1': 11, // Ação
+            '2': 2,  // Corrida
+            '3': 3,  // Luta
+            '4': 2   // Esportes
+        };
 
-            for (var i = 0; gameItems.length; i++) {
-                var gameTitle = gameItems[i].getElementsByTagName('p')[0].innerText.toLowerCase();
-                if (gameTitle.includes(input)) {
-                    gameItems[i].style.display = "";
-                } else {
-                    gameItems[i].style.display = "none";
-                }
+        // Atualizar contadores
+        Object.keys(gameCounts).forEach(cat => {
+            const element = document.getElementById(`count-${cat}`);
+            if (element) {
+                const count = gameCounts[cat];
+                element.textContent = `${count} ${count === 1 ? 'jogo' : 'jogos'}`;
             }
-        }
-    </script>
-    
-</body>
-<footer>
-    <p><strong>© Gotico_suaveiro</strong></p>
-</footer>
+        });
 
+        // Animação ao passar o mouse
+        document.querySelectorAll('.category-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px) scale(1.05)';
+            });
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+    </script>
+</body>
 </html>
